@@ -1,0 +1,50 @@
+body {
+    margin: 0;
+    overflow: hidden;
+    height: 100vh;
+    background: #111;
+}
+
+.circle {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: linear-gradient(45deg, rgba(255, 0, 150, 0.8), rgba(0, 150, 255, 0.8));
+    opacity: 0.7;
+    animation: move 10s infinite linear;
+}
+
+@keyframes move {
+    0% {
+        transform: translate(0, 0) scale(1);
+    }
+    50% {
+        transform: translate(200vw, 200vh) scale(1.5);
+    }
+    100% {
+        transform: translate(0, 0) scale(1);
+    }
+}
+
+/* Разные размеры и скорости для разнообразия */
+.circle:nth-child(2) {
+    width: 150px;
+    height: 150px;
+    animation-duration: 12s;
+    animation-delay: -3s;
+}
+
+.circle:nth-child(3) {
+    width: 80px;
+    height: 80px;
+    animation-duration: 15s;
+    animation-delay: -5s;
+}
+
+.circle:nth-child(4) {
+    width: 120px;
+    height: 120px;
+    animation-duration: 8s;
+    animation-delay: -1s;
+}
