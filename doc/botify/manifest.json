@@ -1,0 +1,396 @@
+{
+  "source_base_path": "D:/UserFolders/Desktop/Botify/Botify/docfx_project",
+  "xrefmap": "xrefmap.yml",
+  "files": [
+    {
+      "type": "Resource",
+      "output": {
+        "resource": {
+          "relative_path": "index.json"
+        }
+      }
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.CallbackAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.CallbackAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.CallbackAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.CallbackAttribute.yml\" sourcestartlinenumber=\"1\">Атрибут для регистрации метода как обработчика callback-запроса Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.CallbackHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.CallbackHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.CallbackHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.CallbackHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Помечает класс как контейнер обработчиков callback-запросов Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.CommandAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.CommandAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.CommandAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.CommandAttribute.yml\" sourcestartlinenumber=\"1\">Атрибут для регистрации метода как обработчика Telegram-команды.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.CommandHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.CommandHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.CommandHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.CommandHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Помечает класс как контейнер обработчиков Telegram-команд.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.InlineAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.InlineAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.InlineAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.InlineAttribute.yml\" sourcestartlinenumber=\"1\">Помечает метод как обработчик inline-запроса Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.InlineHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.InlineHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.InlineHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.InlineHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Помечает класс как контейнер обработчиков inline-запросов Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.MessageAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.MessageAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.MessageAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.MessageAttribute.yml\" sourcestartlinenumber=\"1\">Помечает метод как обработчик входящих сообщений Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.MessageHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.MessageHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.MessageHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.MessageHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Помечает класс как контейнер обработчиков входящих сообщений Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.PaymentHandlerAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.PaymentHandlerAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.PaymentHandlerAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.PaymentHandlerAttribute.yml\" sourcestartlinenumber=\"1\">Помечает класс как контейнер обработчиков Telegram-платежей.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.PreCheckoutPaymentAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.PreCheckoutPaymentAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.PreCheckoutPaymentAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.PreCheckoutPaymentAttribute.yml\" sourcestartlinenumber=\"1\">Помечает метод как обработчик события предварительной проверки платежа Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.SuccessfulPaymentAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.SuccessfulPaymentAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.SuccessfulPaymentAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.SuccessfulPaymentAttribute.yml\" sourcestartlinenumber=\"1\">Помечает метод как обработчик события успешной оплаты Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.UseValidatorAttribute.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.UseValidatorAttribute.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes.UseValidatorAttribute",
+      "Summary": "<p sourcefile=\"api/Botify.Attributes.UseValidatorAttribute.yml\" sourcestartlinenumber=\"1\">Подключает валидатор к методу-обработчику\nили ко всему классу обработчика.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Attributes.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Attributes.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Attributes",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.BotifyContext.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.BotifyContext.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.BotifyContext",
+      "Summary": "<p sourcefile=\"api/Botify.BotifyContext.yml\" sourcestartlinenumber=\"1\">Контекст обработки Telegram-обновления в Botify.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.BotifyOptionsBuilder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.BotifyOptionsBuilder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.BotifyOptionsBuilder",
+      "Summary": "<p sourcefile=\"api/Botify.BotifyOptionsBuilder.yml\" sourcestartlinenumber=\"1\">Построитель конфигурации Botify.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Builder.ServiceCollectionExtensions.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Builder.ServiceCollectionExtensions.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Builder.ServiceCollectionExtensions",
+      "Summary": "<p sourcefile=\"api/Botify.Builder.ServiceCollectionExtensions.yml\" sourcestartlinenumber=\"1\">Методы расширения для регистрации сервисов Botify.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Builder.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Builder.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Builder",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Interfaces.IBotifyValidator.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Interfaces.IBotifyValidator.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Interfaces.IBotifyValidator",
+      "Summary": "<p sourcefile=\"api/Botify.Interfaces.IBotifyValidator.yml\" sourcestartlinenumber=\"1\">Представляет валидатор Botify,\nвыполняющий проверку входящего запроса Telegram.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Interfaces.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Interfaces.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Interfaces",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Services.LoggerService.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Services.LoggerService.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Services.LoggerService",
+      "Summary": "<p sourcefile=\"api/Botify.Services.LoggerService.yml\" sourcestartlinenumber=\"1\">Сервис логирования Botify.</p>\n"
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.Services.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.Services.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify.Services",
+      "Summary": null
+    },
+    {
+      "type": "ManagedReference",
+      "source_relative_path": "api/Botify.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/Botify.html"
+        }
+      },
+      "version": "",
+      "Uid": null,
+      "IsMRef": true,
+      "Title": "Botify",
+      "Summary": null
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "api/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "api/toc.html"
+        },
+        ".json": {
+          "relative_path": "api/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/getting-started.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/getting-started.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/introduction.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/introduction.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "docs/toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "docs/toc.html"
+        },
+        ".json": {
+          "relative_path": "docs/toc.json"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "index.md",
+      "output": {
+        ".html": {
+          "relative_path": "index.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Toc",
+      "source_relative_path": "toc.yml",
+      "output": {
+        ".html": {
+          "relative_path": "toc.html"
+        },
+        ".json": {
+          "relative_path": "toc.json"
+        }
+      },
+      "version": ""
+    }
+  ],
+  "groups": [
+    {
+      "xrefmap": "xrefmap.yml"
+    }
+  ]
+}
