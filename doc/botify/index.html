@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>This is the HOMEPAGE. | Botify Documentation </title>
+      <title>Botify | Botify Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="This is the HOMEPAGE. | Botify Documentation ">
+      <meta name="title" content="Botify | Botify Documentation ">
       
       
       <link rel="icon" href="favicon.ico">
@@ -30,6 +30,11 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
+      <script>
+        window.docfx = window.docfx || {};
+        window.docfx.iconLinks = [{"icon":"github","href":"https://github.com/Kaminasta/Botify","title":"GitHub"}];
+      </script>
+
       <script type="module" src="./public/docfx.min.js"></script>
 
       <script>
@@ -39,11 +44,11 @@
 
   </head>
 
-  <body class="tex2jax_ignore" data-layout="landing" data-yaml-mime="">
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="index.html">
+          <a class="navbar-brand" href="./">
             <img id="logo" class="svg" src="logo.svg" alt="Botify">
             Botify
           </a>
@@ -71,13 +76,20 @@
         </div>
 
         <article data-uid="">
-<h1 id="this-is-the-homepage">This is the <strong>HOMEPAGE</strong>.</h1>
+<h1 id="botify">Botify</h1>
 
-<p>Refer to <a href="http://daringfireball.net/projects/markdown/">Markdown</a> for how to write markdown files.</p>
-<h2 id="quick-start-notes">Quick Start Notes:</h2>
-<ol>
-<li>Add images to the <em>images</em> folder if the file is referencing an image.</li>
-</ol>
+<p>Botify — C#-фреймворк для Telegram-ботов с интеграцией в Dependency Injection.</p>
+<p>Здесь документация разделена на две части: ручные страницы с гайдами и примерами, а также автоматически собранный API-референс.</p>
+<h2 id="что-здесь-есть">Что здесь есть</h2>
+<ul>
+<li>Быстрый старт и общая архитектура.</li>
+<li>Настройка <code>BotifyOptionsBuilder</code>.</li>
+<li>Отдельные страницы для команд, сообщений, callback, inline и платежей.</li>
+<li>Раздел про валидаторы и неизвестные события.</li>
+<li>Примеры, которые можно брать как основу для собственного проекта.</li>
+</ul>
+<h2 id="с-чего-начать">С чего начать</h2>
+<p>Откройте раздел <strong>Быстрый старт</strong>, затем перейдите к странице <strong>Архитектура</strong> и дальше к нужному типу обработчика.</p>
 
 </article>
 
@@ -99,7 +111,10 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          
+        </div>
+        <div class="flex-fill text-end">
+          <span>Made with <a href="https://dotmake.build/docfx-plus/">docfx-plus</a></span>
         </div>
       </div>
     </footer>

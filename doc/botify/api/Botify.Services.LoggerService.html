@@ -2,9 +2,9 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Class LoggerService | Botify Documentation </title>
+      <title>LoggerService Class | Botify Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Class LoggerService | Botify Documentation ">
+      <meta name="title" content="LoggerService Class | Botify Documentation ">
       
       <meta name="description" content="Сервис логирования Botify.">
       <link rel="icon" href="../favicon.ico">
@@ -30,6 +30,11 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
+      <script>
+        window.docfx = window.docfx || {};
+        window.docfx.iconLinks = [{"icon":"github","href":"https://github.com/Kaminasta/Botify","title":"GitHub"}];
+      </script>
+
       <script type="module" src="./../public/docfx.min.js"></script>
 
       <script>
@@ -43,7 +48,7 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand" href=".././">
             <img id="logo" class="svg" src="../logo.svg" alt="Botify">
             Botify
           </a>
@@ -89,16 +94,20 @@
 
 
   <h1 id="Botify_Services_LoggerService" data-uid="Botify.Services.LoggerService" class="text-break">
-Class LoggerService  <a class="header-action link-secondary" title="View source" href="https://github.com/Kaminasta/Botify/blob/master/Services/LoggerService.cs/#L36"><i class="bi bi-code-slash"></i></a>
+LoggerService Class  <a class="header-action link-secondary" title="View source" href="https://github.com/Kaminasta/Botify/blob/master/Services/LoggerService.cs/#L36"><i class="bi bi-code-slash"></i></a>
   </h1>
 
+  <h2 class="section" id="Botify_Services_LoggerService_definition">Definition</h2>
+
   <div class="facts text-secondary">
-    <dl><dt>Namespace</dt><dd><a class="xref" href="Botify.html">Botify</a>.<a class="xref" href="Botify.Services.html">Services</a></dd></dl>
+    <dl><dt>Namespace</dt><dd><a class="xref" href="Botify.Services.html">Botify.Services</a></dd></dl>
   <dl><dt>Assembly</dt><dd>Botify.dll</dd></dl>
   </div>
 
-  <div class="markdown summary"><p>Сервис логирования Botify.</p>
-</div>
+  <div class="markdown summary">
+  <p>Сервис логирования Botify.</p>
+
+  </div>
   <div class="markdown conceptual"></div>
 
   <div class="codewrapper">
@@ -118,36 +127,9 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
 
 
 
-  <dl class="typelist inheritedMembers">
-    <dt>Inherited Members</dt>
-    <dd>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object)">object.Equals(object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.equals#system-object-equals(system-object-system-object)">object.Equals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gethashcode">object.GetHashCode()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.gettype">object.GetType()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.memberwiseclone">object.MemberwiseClone()</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.referenceequals">object.ReferenceEquals(object, object)</a>
-    </div>
-    <div>
-      <a class="xref" href="https://learn.microsoft.com/dotnet/api/system.object.tostring">object.ToString()</a>
-    </div>
-  </dd></dl>
 
 
-
-
-  <h2 id="Botify_Services_LoggerService_remarks">Remarks</h2>
+  <h2 class="section" id="Botify_Services_LoggerService_remarks">Remarks</h2>
   <div class="markdown level0 remarks"><p>Предоставляет удобный способ записи логов
 через систему логирования <a class="xref" href="https://learn.microsoft.com/dotnet/api/microsoft">Microsoft.Extensions.Logging</a>.</p>
 <p>Учитывает минимальный уровень логирования,
@@ -155,20 +137,21 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
 <p>Может использоваться как внутри Botify,
 так и в пользовательском коде.</p>
 <p>Пример:</p>
-<pre><code class="lang-csharp">public class MyService
+<pre><code class="lang-cs">public class MyService
 {
     private readonly LoggerService _logger;
-
+<!-- -->
     public MyService(LoggerService logger)
     {
         _logger = logger;
     }
-
+<!-- -->
     public void Test()
     {
         _logger.Log("Сообщение");
     }
-}</code></pre>
+}
+</code></pre>
 </div>
 
 
@@ -178,13 +161,16 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
 
   <a id="Botify_Services_LoggerService__ctor_" data-uid="Botify.Services.LoggerService.#ctor*"></a>
 
-  <h3 id="Botify_Services_LoggerService__ctor_Botify_BotifyOptionsBuilder_" data-uid="Botify.Services.LoggerService.#ctor(Botify.BotifyOptionsBuilder)">
+  <h3 class="section" id="Botify_Services_LoggerService__ctor_Botify_BotifyOptionsBuilder_" data-uid="Botify.Services.LoggerService.#ctor(Botify.BotifyOptionsBuilder)">
   LoggerService(BotifyOptionsBuilder)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Kaminasta/Botify/blob/master/Services/LoggerService.cs/#L47"><i class="bi bi-code-slash"></i></a>
   </h3>
+  <div class="memberInfo">
 
-  <div class="markdown level1 summary"><p>Инициализирует сервис логирования.</p>
-</div>
+  <div class="markdown level1 summary">
+  <p>Инициализирует сервис логирования.</p>
+
+  </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -208,6 +194,8 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
 
 
 
+  </div>
+
 
   <h2 class="section" id="methods">Methods
 </h2>
@@ -215,13 +203,16 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
 
   <a id="Botify_Services_LoggerService_Log_" data-uid="Botify.Services.LoggerService.Log*"></a>
 
-  <h3 id="Botify_Services_LoggerService_Log_System_String_Microsoft_Extensions_Logging_LogLevel_" data-uid="Botify.Services.LoggerService.Log(System.String,Microsoft.Extensions.Logging.LogLevel)">
+  <h3 class="section" id="Botify_Services_LoggerService_Log_System_String_Microsoft_Extensions_Logging_LogLevel_" data-uid="Botify.Services.LoggerService.Log(System.String,Microsoft.Extensions.Logging.LogLevel)">
   Log(string, LogLevel)
   <a class="header-action link-secondary" title="View source" href="https://github.com/Kaminasta/Botify/blob/master/Services/LoggerService.cs/#L63"><i class="bi bi-code-slash"></i></a>
   </h3>
+  <div class="memberInfo">
 
-  <div class="markdown level1 summary"><p>Записывает сообщение в лог.</p>
-</div>
+  <div class="markdown level1 summary">
+  <p>Записывает сообщение в лог.</p>
+
+  </div>
   <div class="markdown level1 conceptual"></div>
 
   <div class="codewrapper">
@@ -249,6 +240,8 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
 
 
 
+  </div>
+
 
 
 </article>
@@ -270,7 +263,10 @@ Class LoggerService  <a class="header-action link-secondary" title="View source"
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          
+        </div>
+        <div class="flex-fill text-end">
+          <span>Made with <a href="https://dotmake.build/docfx-plus/">docfx-plus</a></span>
         </div>
       </div>
     </footer>

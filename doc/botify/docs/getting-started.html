@@ -2,11 +2,11 @@
 <html>
   <head>
     <meta charset="utf-8">
-      <title>Getting Started | Botify Documentation </title>
+      <title>Быстрый старт | Botify Documentation </title>
       <meta name="viewport" content="width=device-width, initial-scale=1.0">
-      <meta name="title" content="Getting Started | Botify Documentation ">
+      <meta name="title" content="Быстрый старт | Botify Documentation ">
       
-      
+      <meta name="description" content="Минимальный способ поднять Botify-бота.">
       <link rel="icon" href="../favicon.ico">
       <link rel="stylesheet" href="../public/docfx.min.css">
       <link rel="stylesheet" href="../public/main.css">
@@ -30,6 +30,11 @@
       <meta name="loc:copy" content="Copy">
       <meta name="loc:downloadPdf" content="Download PDF">
 
+      <script>
+        window.docfx = window.docfx || {};
+        window.docfx.iconLinks = [{"icon":"github","href":"https://github.com/Kaminasta/Botify","title":"GitHub"}];
+      </script>
+
       <script type="module" src="./../public/docfx.min.js"></script>
 
       <script>
@@ -43,7 +48,7 @@
     <header class="bg-body border-bottom">
       <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
         <div class="container-xxl flex-nowrap">
-          <a class="navbar-brand" href="../index.html">
+          <a class="navbar-brand" href=".././">
             <img id="logo" class="svg" src="../logo.svg" alt="Botify">
             Botify
           </a>
@@ -85,8 +90,56 @@
         </div>
 
         <article data-uid="">
-<h1 id="getting-started">Getting Started</h1>
+<h1 id="быстрый-старт">Быстрый старт</h1>
 
+<p>Ниже показан минимальный путь, который соответствует текущему коду Botify.</p>
+<h2 id="регистрация-в-di">Регистрация в DI</h2>
+<pre><code class="lang-csharp">using Botify.Builder;
+using Microsoft.Extensions.Hosting;
+
+var builder = Host.CreateApplicationBuilder(args);
+
+var token = builder.Configuration[&quot;Telegram:BotToken&quot;]
+    ?? throw new InvalidOperationException(&quot;Telegram:BotToken не задан&quot;);
+
+builder.Services.AddBotifyHandlers();
+builder.Services.AddBotify(options =&gt;
+{
+    options.SetToken(token);
+});
+
+var host = builder.Build();
+host.Run();
+</code></pre>
+<h2 id="минимальный-handler">Минимальный handler</h2>
+<pre><code class="lang-csharp">using Botify;
+using Botify.Attributes;
+using Microsoft.Extensions.DependencyInjection;
+using Telegram.Bot;
+
+[CommandHandler]
+public class StartHandler
+{
+    [Command(&quot;start&quot;, &quot;Начать работу с ботом&quot;)]
+    public async Task Start(BotifyContext context)
+    {
+        if (context.Chat is null)
+            return;
+
+        await context.Client.SendTextMessageAsync(
+            context.Chat.Id,
+            &quot;Привет! Botify готов к работе.&quot;,
+            cancellationToken: context.CancellationToken);
+    }
+}
+</code></pre>
+<h2 id="что-важно-помнить">Что важно помнить</h2>
+<p><code>AddBotifyHandlers()</code> сканирует загруженные сборки и ищет:</p>
+<ul>
+<li>классы с атрибутами <code>[CommandHandler]</code>, <code>[CallbackHandler]</code>, <code>[MessageHandler]</code>, <code>[InlineHandler]</code>, <code>[PaymentHandler]</code>;</li>
+<li>типы, реализующие <code>IBotifyValidator</code>.</li>
+</ul>
+<p>Методы внутри handler-классов должны быть <code>public</code>, нестатическими и иметь сигнатуру <code>Task Method(BotifyContext context)</code>.</p>
 
 </article>
 
@@ -108,7 +161,10 @@
     <footer class="border-top text-secondary">
       <div class="container-xxl">
         <div class="flex-fill">
-          <span>Made with <a href="https://dotnet.github.io/docfx">docfx</a></span>
+          
+        </div>
+        <div class="flex-fill text-end">
+          <span>Made with <a href="https://dotmake.build/docfx-plus/">docfx-plus</a></span>
         </div>
       </div>
     </footer>

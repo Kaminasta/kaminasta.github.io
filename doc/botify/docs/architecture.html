@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+      <title>Архитектура Botify | Botify Documentation </title>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <meta name="title" content="Архитектура Botify | Botify Documentation ">
+      
+      <meta name="description" content="Как Botify принимает обновления и вызывает обработчики.">
+      <link rel="icon" href="../favicon.ico">
+      <link rel="stylesheet" href="../public/docfx.min.css">
+      <link rel="stylesheet" href="../public/main.css">
+      <meta name="docfx:navrel" content="../toc.html">
+      <meta name="docfx:tocrel" content="toc.html">
+      
+      <meta name="docfx:rel" content="../">
+      
+      
+      <meta name="docfx:docurl" content="https://github.com/Kaminasta/Botify/blob/master/docfx_project/docs/architecture.md/#L1">
+      <meta name="loc:inThisArticle" content="In this article">
+      <meta name="loc:searchResultsCount" content="{count} results for &quot;{query}&quot;">
+      <meta name="loc:searchNoResults" content="No results for &quot;{query}&quot;">
+      <meta name="loc:tocFilter" content="Filter by title">
+      <meta name="loc:nextArticle" content="Next">
+      <meta name="loc:prevArticle" content="Previous">
+      <meta name="loc:themeLight" content="Light">
+      <meta name="loc:themeDark" content="Dark">
+      <meta name="loc:themeAuto" content="Auto">
+      <meta name="loc:changeTheme" content="Change theme">
+      <meta name="loc:copy" content="Copy">
+      <meta name="loc:downloadPdf" content="Download PDF">
+
+      <script>
+        window.docfx = window.docfx || {};
+        window.docfx.iconLinks = [{"icon":"github","href":"https://github.com/Kaminasta/Botify","title":"GitHub"}];
+      </script>
+
+      <script type="module" src="./../public/docfx.min.js"></script>
+
+      <script>
+        const theme = localStorage.getItem('theme') || 'auto'
+        document.documentElement.setAttribute('data-bs-theme', theme === 'auto' ? (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light') : theme)
+      </script>
+
+  </head>
+
+  <body class="tex2jax_ignore" data-layout="" data-yaml-mime="">
+    <header class="bg-body border-bottom">
+      <nav id="autocollapse" class="navbar navbar-expand-md" role="navigation">
+        <div class="container-xxl flex-nowrap">
+          <a class="navbar-brand" href=".././">
+            <img id="logo" class="svg" src="../logo.svg" alt="Botify">
+            Botify
+          </a>
+          <button class="btn btn-lg d-md-none border-0" type="button" data-bs-toggle="collapse" data-bs-target="#navpanel" aria-controls="navpanel" aria-expanded="false" aria-label="Toggle navigation">
+            <i class="bi bi-three-dots"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navpanel">
+            <div id="navbar">
+              <form class="search" role="search" id="search">
+                <i class="bi bi-search"></i>
+                <input class="form-control" id="search-query" type="search" disabled placeholder="Search" autocomplete="off" aria-label="Search">
+              </form>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main class="container-xxl">
+      <div class="toc-offcanvas">
+        <div class="offcanvas-md offcanvas-start" tabindex="-1" id="tocOffcanvas" aria-labelledby="tocOffcanvasLabel">
+          <div class="offcanvas-header">
+            <h5 class="offcanvas-title" id="tocOffcanvasLabel">Table of Contents</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="offcanvas" data-bs-target="#tocOffcanvas" aria-label="Close"></button>
+          </div>
+          <div class="offcanvas-body">
+            <nav class="toc" id="toc"></nav>
+          </div>
+        </div>
+      </div>
+
+      <div class="content">
+        <div class="actionbar">
+          <button class="btn btn-lg border-0 d-md-none" type="button" data-bs-toggle="offcanvas" data-bs-target="#tocOffcanvas" aria-controls="tocOffcanvas" aria-expanded="false" aria-label="Show table of contents">
+            <i class="bi bi-list"></i>
+          </button>
+
+          <nav id="breadcrumb"></nav>
+        </div>
+
+        <article data-uid="">
+<h1 id="архитектура">Архитектура</h1>
+
+<p>Botify устроен как небольшой DI-ориентированный runtime поверх Telegram.Bot.</p>
+<h2 id="слои">Слои</h2>
+<h3 id="1-конфигурация">1. Конфигурация</h3>
+<p><code>BotifyOptionsBuilder</code> хранит:</p>
+<ul>
+<li>токен бота;</li>
+<li>базовый URL Telegram API;</li>
+<li>символ начала команды;</li>
+<li>разделитель callback-данных;</li>
+<li>разделитель inline-запросов;</li>
+<li>логгер и минимальный уровень логирования;</li>
+<li>пользовательский <code>HttpClientHandler</code>;</li>
+<li>обработчики неизвестных команд, callback и inline.</li>
+</ul>
+<h3 id="2-контекст">2. Контекст</h3>
+<p><code>BotifyContext</code> создаётся на каждый входящий <code>Update</code> и содержит:</p>
+<ul>
+<li><code>Client</code>;</li>
+<li><code>Update</code>;</li>
+<li><code>Services</code>;</li>
+<li><code>CancellationToken</code>;</li>
+<li><code>Options</code>;</li>
+<li><code>Logger</code>.</li>
+</ul>
+<p>Для удобства в нём есть вычисляемые свойства:</p>
+<ul>
+<li><code>User</code>;</li>
+<li><code>Chat</code>;</li>
+<li><code>Message</code>;</li>
+<li><code>Text</code>;</li>
+<li><code>CallbackQuery</code>;</li>
+<li><code>InlineQuery</code>.</li>
+</ul>
+<h3 id="3-регистрация">3. Регистрация</h3>
+<p><code>AddBotifyHandlers()</code> сканирует загруженные сборки и регистрирует:</p>
+<ul>
+<li>handler-классы с атрибутами Botify;</li>
+<li>валидаторы, реализующие <code>IBotifyValidator</code>.</li>
+</ul>
+<h3 id="4-исполнение">4. Исполнение</h3>
+<p><code>BotHostedService</code> принимает обновления и маршрутизирует их так:</p>
+<ul>
+<li><code>Message</code> → сначала payment-сценарий, затем command-handler, затем message-handler;</li>
+<li><code>CallbackQuery</code> → callback-handler;</li>
+<li><code>InlineQuery</code> → inline-handler;</li>
+<li><code>PreCheckoutQuery</code> → payment-handler;</li>
+<li>остальные типы логируются как неподдержанные.</li>
+</ul>
+<h2 id="контракт-handler-метода">Контракт handler-метода</h2>
+<p>Botify не вызывает произвольные сигнатуры. Допускается только:</p>
+<pre><code class="lang-csharp">Task SomeHandler(BotifyContext context)
+</code></pre>
+<p>Если сигнатура другая, регистрация завершится ошибкой.</p>
+<h2 id="порядок-обработки-сообщения">Порядок обработки сообщения</h2>
+<p>Для текстового сообщения Botify сначала пытается найти команду. Только если команда не найдена, управление переходит к message-handlers. Это важно учитывать, если у вас есть пересекающиеся regex-шаблоны и команды.</p>
+
+</article>
+
+        <div class="contribution d-print-none">
+          <a href="https://github.com/Kaminasta/Botify/blob/master/docfx_project/docs/architecture.md/#L1" class="edit-link">Edit this page</a>
+        </div>
+
+        <div class="next-article d-print-none border-top" id="nextArticle"></div>
+
+      </div>
+
+      <div class="affix">
+        <nav id="affix"></nav>
+      </div>
+    </main>
+
+    <div class="container-xxl search-results" id="search-results"></div>
+
+    <footer class="border-top text-secondary">
+      <div class="container-xxl">
+        <div class="flex-fill">
+          
+        </div>
+        <div class="flex-fill text-end">
+          <span>Made with <a href="https://dotmake.build/docfx-plus/">docfx-plus</a></span>
+        </div>
+      </div>
+    </footer>
+  </body>
+</html>

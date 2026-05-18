@@ -333,6 +333,116 @@
     },
     {
       "type": "Conceptual",
+      "source_relative_path": "docs/advanced/logging.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/advanced/logging.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/advanced/unknown-handlers.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/advanced/unknown-handlers.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/advanced/validators.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/advanced/validators.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/architecture.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/architecture.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/configuration.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/configuration.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/basic-bot.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/basic-bot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/callbacks-bot.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/callbacks-bot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/commands-bot.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/commands-bot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/inline-bot.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/inline-bot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/messages-bot.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/messages-bot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/examples/payments-bot.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/examples/payments-bot.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
       "source_relative_path": "docs/getting-started.md",
       "output": {
         ".html": {
@@ -343,10 +453,60 @@
     },
     {
       "type": "Conceptual",
-      "source_relative_path": "docs/introduction.md",
+      "source_relative_path": "docs/handlers/callbacks.md",
       "output": {
         ".html": {
-          "relative_path": "docs/introduction.html"
+          "relative_path": "docs/handlers/callbacks.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/handlers/commands.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/handlers/commands.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/handlers/inline.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/handlers/inline.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/handlers/messages.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/handlers/messages.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/handlers/payments.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/handlers/payments.html"
+        }
+      },
+      "version": ""
+    },
+    {
+      "type": "Conceptual",
+      "source_relative_path": "docs/index.md",
+      "output": {
+        ".html": {
+          "relative_path": "docs/index.html"
         }
       },
       "version": ""
